@@ -3,21 +3,34 @@
 {% block content %}
     <section class="container pt-5">
         <h1 class="title pb-4">Detail sur Employer</h1>
-        <div class="columns">
-                <div class="column is-12">
-                    <table class="table is-striped is-fullwith">
-                        <tbody>
-                                <tr>
-                                    <td>
-                                        <h1>{{ employer.nom }}</h1>
-                                        <p>{{ employer.prenom }}</p>
-                                        <p>{{ employer.numero_de_telephone }}</p>
-                                        <p>{{ employer.biographie }}</p>
-                                    </td>
-                                </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <div class="columns is-offset-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th><abbr title="Nom">Nom</abbr></th>
+                    <th><abbr title="Prenom">Prenom</abbr></th>
+                    <th><abbr title="Won">Numero de tel</abbr></th>
+                    <th><abbr title="Drawn">Biographie</abbr></th>
+                    <th><abbr title="Drawn">Editer</abbr></th>
+                    <th><abbr title="Drawn">Delete</abbr></th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                <th>{{ employer.nom }}</th>
+                <td>{{ employer.prenom }}</td>
+                <td>{{ employer.numero_de_telephone }}</td>
+                <td>{{ employer.biographie }}</td>
+                <td><a href="{% url 'edit' employer.id %}" class="navbar-item has-text-primary"><strong>Editer</strong></a></td>
+                <td><a href="{% url 'delete' employer.id %}" class="navbar-item has-text-danger"><strong>Delete</strong></a></td>
+            </tbody>
+            </table>
+        </div>
     </section>
 {% endblock %}
+<h1>{{ employer.nom }}</h1>
+                        <p>{{ employer.prenom }}</p>
+                        <p>{{ employer.numero_de_telephone }}</p>
+                        <p>{{ employer.biographie }}</p>
+                        <a href="{% url 'edit' employer.id %}" class="navbar-item"><strong>Editer</strong></a>
+                        <a href="{% url 'delete' employer.id %}" class="navbar-item"><strong>Delete</strong></a>

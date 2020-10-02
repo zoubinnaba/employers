@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from apps.core.views import createEmployer, frontpage, detail
+from apps.core.views import createEmployer, frontpage, detail, edit, delete
 
 urlpatterns = [
     path('', frontpage, name="frontpage"),
-    path('detail/<int:employer_id>', detail, name="detail"),
+    path('edit/<int:employer_id>/', edit, name="edit"),
     path('create/', createEmployer, name="create"),
+    path('detail/<int:employer_id>', detail, name="detail"),
+    path('delete/<int:employer_id>/', delete, name="delete"),
     path('admin/', admin.site.urls),
 ]
