@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <section class="container pt-5">
+        <h1 class="title pb-4">Detail sur Employer</h1>
+        <div class="columns">
+                <div class="column is-12">
+                    <table class="table is-striped is-fullwith">
+                        <tbody>
+                                <tr>
+                                    <td>
+                                        <h1>{{ employer.nom }}</h1>
+                                        <p>{{ employer.prenom }}</p>
+                                        <p>{{ employer.numero_de_telephone }}</p>
+                                        <p>{{ employer.biographie }}</p>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </section>
+{% endblock %}

@@ -4,7 +4,7 @@
     <section class="container pt-5">
         <h1 class="title pb-4">Liste des Employers</h1>
         {% for employer in employers %}
-            <h1 class="subtitle"><a href="#">{{ employer.nom }}</a></h1>
+            <h1 class="subtitle"><a href="{% url 'detail' employer.id %}">{{ employer.nom }}</a></h1>
         {% endfor %}
     </section>
 {% endblock %}
