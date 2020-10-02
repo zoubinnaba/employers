@@ -1,0 +1,32 @@
+<form action="." method="post">
+        {% csrf_token %}
+        <div class="field">
+            <label>Nom</label>
+            <div class="control">
+                <input type="text" name="nom" class="input">
+            </div>
+        </div>
+        <div class="field">
+                <label>Prenom</label>
+                <div class="control">
+                    <input type="text" name="prenom" class="input">
+                </div>
+        </div>
+        <div class="field">
+                <label>Numero de telephone</label>
+                <div class="control">
+                    <input type="text" name="numero_de_telephone" class="input">
+                </div>
+        </div>
+        <div class="field">
+                <label>biographie</label>
+                <div class="control">
+                    <textarea class="textarea" name="biographie" id="" cols="30" rows="10"></textarea>
+                </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <button class="button is-success">Submit</button>
+            </div>
+        </div>
+</form>
